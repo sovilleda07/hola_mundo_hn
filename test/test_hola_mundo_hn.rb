@@ -8,6 +8,17 @@ class TestHolaMundoHn < Minitest::Test
   end
 
   def test_it_does_something_useful
-    assert false
+    assert true
+  end
+
+  def test_saludar
+    # assert_equal "Hola mundo" HolaMundoHn.saludar()
+    expect = HolaMundoHn.saludar()
+    assert_equal expect, "Hola mundo"
+  end
+
+  def test_sum_positives
+    result = ::HolaMundoHn.sum(6,3)
+    assert_equal 9, result
   end
 end
